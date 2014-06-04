@@ -4,13 +4,19 @@
 #include "cocos2d.h"
 #include "GameController.h"
 
+USING_NS_CC;
+
 class GameController;
 
-class HelloWorld : public cocos2d::LayerColor
+class StartUp : public cocos2d::LayerColor
 {
     
 private:
-    Vector<GameController*> gcs;
+    Label *btnTwo,*btnThree,*btnFour,*btnFive;
+    
+private:
+    void addBtns();
+    void addBtnListeners();
     
 public:
     // there's no 'id' in cpp, so we recommend returning the class instance pointer
@@ -19,13 +25,11 @@ public:
     // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
     virtual bool init();
     
-    virtual void update(float dt);
-    
     // a selector callback
     void menuCloseCallback(cocos2d::Ref* pSender);
     
     // implement the "static create()" method manually
-    CREATE_FUNC(HelloWorld);
+    CREATE_FUNC(StartUp);
 };
 
 #endif // __HELLOWORLD_SCENE_H__

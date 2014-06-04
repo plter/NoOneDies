@@ -14,14 +14,18 @@
 
 using namespace cocos2d;
 
-class GameOverLayer:public LayerColor {
+class GameOver:public LayerColor {
+    
+private:
+    int _currentHeroCount;
+    double _score;
     
 public:
-    virtual bool init();
+    virtual bool initWithCurrentHeroCountAndScore(int currentHeroCount,double score);
     
-    static Scene* createScene();
+    static Scene* createScene(int currentHeroCount,double score);
     
-    CREATE_FUNC(GameOverLayer);
+    static GameOver* create(int currentHeroCount,double score);
 };
 
 

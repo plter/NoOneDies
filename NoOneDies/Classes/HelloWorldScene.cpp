@@ -30,44 +30,48 @@ bool HelloWorld::init()
         return false;
     }
     
-    auto contactListener = EventListenerPhysicsContact::create();
-    contactListener->onContactBegin = [this](PhysicsContact & contact){
-        Director::getInstance()->replaceScene(GameOverLayer::createScene());
-        
-        return true;
-    };
-    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(contactListener, this);
+    Size visibleSize = Director::getInstance()->getVisibleSize();
     
     gcs.insert(0, GameController::create(this, 30));
-    gcs.insert(0, GameController::create(this, 180));
-    gcs.insert(0, GameController::create(this, 330));
-    gcs.insert(0, GameController::create(this, 480));
+    gcs.insert(0, GameController::create(this, 250));
     
     scheduleUpdate();
     
-    
-    auto listener = EventListenerTouchOneByOne::create();
-    listener->onTouchBegan = [this](Touch * t,Event * e){
+    auto listener = EventListenerPhysicsContact::create();
+    listener->onContactBegin = [this](PhysicsContact & contact){
+        this->unscheduleUpdate();
         
-        for (auto it = this->gcs.begin(); it!=this->gcs.end(); it++) {
-            auto gc = *it;
-            
-            if (gc->getEdge()->getBoundingBox().containsPoint(t->getLocation())) {
-                gc->onTouch();
+        Director::getInstance()->replaceScene(GameOver::createScene());
+        
+        return true;
+    };
+    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
+    
+    
+    auto touchListener = EventListenerTouchOneByOne::create();
+    touchListener->onTouchBegan = [this](Touch * t,Event * e){
+        
+        for (auto it = gcs.begin(); it!=gcs.end(); it++) {
+            if ((*it)->hitTestPoint(t->getLocation())) {
+                (*it)->onUserTouch();
                 break;
             }
         }
         
         return false;
     };
-    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
+    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(touchListener, this);
+    
     return true;
 }
 
+
 void HelloWorld::update(float dt){
+    
     for (auto it = gcs.begin(); it!=gcs.end(); it++) {
-        (*it)->onUpdate();
+        (*it)->onUpdate(dt);
     }
+    
 }
 
 void HelloWorld::menuCloseCallback(Ref* pSender)

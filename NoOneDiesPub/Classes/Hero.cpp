@@ -16,8 +16,11 @@ bool Hero::init(){
     
     Sprite::init();
     
-    setContentSize(Size(44, 52));
-    setPhysicsBody(PhysicsBody::createBox(Size(44, 52)));
+    Size s = Size(44, 52);
+    
+    setContentSize(s*0.5);
+    setPhysicsBody(PhysicsBody::createBox(s*0.5));
+    setScale(0.5);
     runAction(RepeatForever::create(FlashTool::readJsonSpriteSheet("hero.json", 0.2f)));
     
     getPhysicsBody()->setRotationEnable(false);

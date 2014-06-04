@@ -24,10 +24,14 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		31073487193EBEF000F454AA /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31073486193EBEF000F454AA /* GameScene.cpp */; };
+		31073488193EBEF000F454AA /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31073486193EBEF000F454AA /* GameScene.cpp */; };
+		3128109F193EECFD0081861B /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3128109E193EECFD0081861B /* logo.png */; };
+		312810A0193EECFD0081861B /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3128109E193EECFD0081861B /* logo.png */; };
 		31303A89193B2A6E0089C665 /* GameOverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31303A87193B2A6E0089C665 /* GameOverScene.cpp */; };
 		31303A8A193B2A6E0089C665 /* GameOverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31303A87193B2A6E0089C665 /* GameOverScene.cpp */; };
-		317CF63A193B16340079B54D /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 317CF638193B16340079B54D /* HelloWorldScene.cpp */; };
-		317CF63B193B16340079B54D /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 317CF638193B16340079B54D /* HelloWorldScene.cpp */; };
+		317CF63A193B16340079B54D /* StartUpScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 317CF638193B16340079B54D /* StartUpScene.cpp */; };
+		317CF63B193B16340079B54D /* StartUpScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 317CF638193B16340079B54D /* StartUpScene.cpp */; };
 		317CF63E193B16480079B54D /* GameController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 317CF63C193B16480079B54D /* GameController.cpp */; };
 		317CF63F193B16480079B54D /* GameController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 317CF63C193B16480079B54D /* GameController.cpp */; };
 		317CF642193B165B0079B54D /* Edge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 317CF640193B165A0079B54D /* Edge.cpp */; };
@@ -242,10 +246,13 @@
 		1D6058910D05DD3D006BFB54 /* NoOneDiesPub iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NoOneDiesPub iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		31073486193EBEF000F454AA /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameScene.cpp; path = ../Classes/GameScene.cpp; sourceTree = "<group>"; };
+		31073489193EBF1D00F454AA /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = ../Classes/GameScene.h; sourceTree = "<group>"; };
+		3128109E193EECFD0081861B /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		31303A87193B2A6E0089C665 /* GameOverScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameOverScene.cpp; path = ../Classes/GameOverScene.cpp; sourceTree = "<group>"; };
 		31303A88193B2A6E0089C665 /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameOverScene.h; path = ../Classes/GameOverScene.h; sourceTree = "<group>"; };
-		317CF638193B16340079B54D /* HelloWorldScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloWorldScene.cpp; sourceTree = "<group>"; };
-		317CF639193B16340079B54D /* HelloWorldScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldScene.h; sourceTree = "<group>"; };
+		317CF638193B16340079B54D /* StartUpScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StartUpScene.cpp; sourceTree = "<group>"; };
+		317CF639193B16340079B54D /* StartUpScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartUpScene.h; sourceTree = "<group>"; };
 		317CF63C193B16480079B54D /* GameController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameController.cpp; sourceTree = "<group>"; };
 		317CF63D193B16480079B54D /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
 		317CF640193B165A0079B54D /* Edge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Edge.cpp; sourceTree = "<group>"; };
@@ -366,6 +373,9 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3128109A193EC50F0081861B /* scenes */,
+				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
+				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
 				317CF64C193B168F0079B54D /* Block.cpp */,
 				317CF64D193B168F0079B54D /* Block.h */,
 				317CF648193B167E0079B54D /* FlashTool.cpp */,
@@ -376,12 +386,6 @@
 				317CF641193B165A0079B54D /* Edge.h */,
 				317CF63C193B16480079B54D /* GameController.cpp */,
 				317CF63D193B16480079B54D /* GameController.h */,
-				317CF638193B16340079B54D /* HelloWorldScene.cpp */,
-				317CF639193B16340079B54D /* HelloWorldScene.h */,
-				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
-				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
-				31303A87193B2A6E0089C665 /* GameOverScene.cpp */,
-				31303A88193B2A6E0089C665 /* GameOverScene.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -449,6 +453,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3128109A193EC50F0081861B /* scenes */ = {
+			isa = PBXGroup;
+			children = (
+				317CF638193B16340079B54D /* StartUpScene.cpp */,
+				317CF639193B16340079B54D /* StartUpScene.h */,
+				31303A87193B2A6E0089C665 /* GameOverScene.cpp */,
+				31303A88193B2A6E0089C665 /* GameOverScene.h */,
+				31073486193EBEF000F454AA /* GameScene.cpp */,
+				31073489193EBF1D00F454AA /* GameScene.h */,
+			);
+			name = scenes;
+			sourceTree = "<group>";
+		};
 		503AE0F517EB97AB00D1A890 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -497,6 +514,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3128109E193EECFD0081861B /* logo.png */,
 				317CF650193B17430079B54D /* hero.json */,
 				317CF651193B17430079B54D /* hero.png */,
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
@@ -673,6 +691,7 @@
 			files = (
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
+				3128109F193EECFD0081861B /* logo.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */,
@@ -703,6 +722,7 @@
 				5087E75317EB910900C73F5D /* CloseNormal.png in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
 				5087E75417EB910900C73F5D /* CloseSelected.png in Resources */,
+				312810A0193EECFD0081861B /* logo.png in Resources */,
 				5087E75517EB910900C73F5D /* HelloWorld.png in Resources */,
 				317CF655193B17430079B54D /* hero.png in Resources */,
 			);
@@ -718,13 +738,14 @@
 				31303A89193B2A6E0089C665 /* GameOverScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				317CF63E193B16480079B54D /* GameController.cpp in Sources */,
-				317CF63A193B16340079B54D /* HelloWorldScene.cpp in Sources */,
+				317CF63A193B16340079B54D /* StartUpScene.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				317CF64A193B167E0079B54D /* FlashTool.cpp in Sources */,
 				317CF642193B165B0079B54D /* Edge.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				317CF646193B166D0079B54D /* Hero.cpp in Sources */,
+				31073487193EBEF000F454AA /* GameScene.cpp in Sources */,
 				317CF64E193B168F0079B54D /* Block.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -733,13 +754,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31073488193EBEF000F454AA /* GameScene.cpp in Sources */,
 				5087E75717EB910900C73F5D /* AppDelegate.cpp in Sources */,
 				317CF63F193B16480079B54D /* GameController.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				317CF64B193B167E0079B54D /* FlashTool.cpp in Sources */,
 				317CF647193B166D0079B54D /* Hero.cpp in Sources */,
 				317CF64F193B168F0079B54D /* Block.cpp in Sources */,
-				317CF63B193B16340079B54D /* HelloWorldScene.cpp in Sources */,
+				317CF63B193B16340079B54D /* StartUpScene.cpp in Sources */,
 				31303A8A193B2A6E0089C665 /* GameOverScene.cpp in Sources */,
 				317CF643193B165B0079B54D /* Edge.cpp in Sources */,
 			);
@@ -824,7 +846,7 @@
 					"$(SRCROOT)/../cocos2d/cocos/platform/ios/Simulation",
 				);
 				INFOPLIST_FILE = ios/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -853,7 +875,7 @@
 					"$(SRCROOT)/../cocos2d/cocos/platform/ios/Simulation",
 				);
 				INFOPLIST_FILE = ios/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -886,6 +908,7 @@
 				);
 				INFOPLIST_FILE = mac/Info.plist;
 				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -913,6 +936,7 @@
 				);
 				INFOPLIST_FILE = mac/Info.plist;
 				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
