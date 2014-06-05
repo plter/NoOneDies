@@ -49,12 +49,15 @@ void Game::addGcs(int heroCount){
 }
 
 void Game::addContactListener(){
-    auto contactListener = EventListenerPhysicsContact::create();
+    contactListener = EventListenerPhysicsContact::create();
     contactListener->onContactBegin = [this](PhysicsContact & contact){
         
         this->unscheduleUpdate();
         
-        Director::getInstance()->replaceScene(GameOver::createScene(_heroCount,20));
+        auto dir = Director::getInstance();
+        dir->getEventDispatcher()->removeEventListener(contactListener);
+        dir->getEventDispatcher()->removeEventListener(touchListener);
+        dir->replaceScene(GameOver::createScene(_heroCount,20));
         return true;
     };
     
@@ -63,8 +66,8 @@ void Game::addContactListener(){
 
 
 void Game::addUserTouchListener(){
-    auto listener = EventListenerTouchOneByOne::create();
-    listener->onTouchBegan = [this](Touch * t,Event * e){
+    touchListener = EventListenerTouchOneByOne::create();
+    touchListener->onTouchBegan = [this](Touch * t,Event * e){
         
         for (auto it = this->gcs.begin(); it!=this->gcs.end(); it++) {
             auto gc = *it;
@@ -77,7 +80,7 @@ void Game::addUserTouchListener(){
         
         return false;
     };
-    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
+    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(touchListener, this);
 }
 
 void Game::update(float dt){

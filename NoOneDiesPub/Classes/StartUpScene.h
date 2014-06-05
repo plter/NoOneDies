@@ -13,6 +13,7 @@ class StartUp : public cocos2d::LayerColor
     
 private:
     Label *btnTwo,*btnThree,*btnFour,*btnFive;
+    EventListenerTouchOneByOne * touchListener;
     
 private:
     void addBtns();

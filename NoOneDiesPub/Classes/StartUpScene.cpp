@@ -38,7 +38,7 @@ bool StartUp::init()
     //add logo
     auto logo = Sprite::create("logo.png");
     addChild(logo);
-    logo->setPositionX(Director::getInstance()->getVisibleSize().width/2);
+    logo->setPosition(visibleSize.width/2,20);
     logo->setAnchorPoint(Vec2(0.5, 0));
     
     //add title
@@ -52,8 +52,9 @@ bool StartUp::init()
     //add open source url
     auto osu = Label::create();
     osu->setSystemFontSize(12);
-    osu->setString("开源地址：https://github.com/plter/NoOneDies");
+    osu->setString("开源地址：https://github.com/plter/NoOneDies\n极客学院：http://jikexueyuan.com");
     osu->setColor(Color3B::BLACK);
+    osu->setPosition(visibleSize.width/2, titleLabel->getPositionY()-titleLabel->getContentSize().height/2-20);
     addChild(osu);
     
     return true;
@@ -61,22 +62,26 @@ bool StartUp::init()
 
 
 void StartUp::addBtnListeners(){
-    auto listener = EventListenerTouchOneByOne::create();
-    listener->onTouchBegan = [this](Touch* t,Event * e){
+    touchListener = EventListenerTouchOneByOne::create();
+    touchListener->onTouchBegan = [this](Touch* t,Event * e){
         
         if (this->btnTwo->getBoundingBox().containsPoint(t->getLocation())) {
+            Director::getInstance()->getEventDispatcher()->removeEventListener(touchListener);
             Director::getInstance()->replaceScene(Game::createScene(2));
         }else if (this->btnThree->getBoundingBox().containsPoint(t->getLocation())){
+            Director::getInstance()->getEventDispatcher()->removeEventListener(touchListener);
             Director::getInstance()->replaceScene(Game::createScene(3));
         }else if (this->btnFour->getBoundingBox().containsPoint(t->getLocation())){
+            Director::getInstance()->getEventDispatcher()->removeEventListener(touchListener);
             Director::getInstance()->replaceScene(Game::createScene(4));
         }else if (this->btnFive->getBoundingBox().containsPoint(t->getLocation())){
+            Director::getInstance()->getEventDispatcher()->removeEventListener(touchListener);
             Director::getInstance()->replaceScene(Game::createScene(5));
         }
         
         return false;
     };
-    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
+    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(touchListener, this);
 }
 
 

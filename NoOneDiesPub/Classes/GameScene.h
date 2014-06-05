@@ -16,6 +16,8 @@ class Game:public LayerColor {
 private:
     Vector<GameController*> gcs;
     int _heroCount;
+    EventListenerPhysicsContact * contactListener;
+    EventListenerTouchOneByOne * touchListener;
     
 private:
     void addContactListener();

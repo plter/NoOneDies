@@ -19,6 +19,11 @@ class GameOver:public LayerColor {
 private:
     int _currentHeroCount;
     double _score;
+    Label *btnReplay,*btnGoHome;
+    EventListenerTouchOneByOne * touchListener;
+    
+private:
+    Label * createButton(std::string text,float fontSize);
     
 public:
     virtual bool initWithCurrentHeroCountAndScore(int currentHeroCount,double score);

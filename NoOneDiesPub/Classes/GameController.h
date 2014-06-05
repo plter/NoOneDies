@@ -15,10 +15,6 @@
 #include "Hero.h"
 #include "Block.h"
 
-class Edge;
-class Hero;
-class Block;
-
 using namespace cocos2d;
 
 class GameController :public Scheduler{

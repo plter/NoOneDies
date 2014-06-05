@@ -1,1 +1,6 @@
 cocos2d
+bin
+gen
+obj
+Release.win32
+Debug.win32
