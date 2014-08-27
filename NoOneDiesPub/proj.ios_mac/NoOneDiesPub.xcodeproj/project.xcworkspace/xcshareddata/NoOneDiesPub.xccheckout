@@ -10,29 +10,29 @@
 	<string>NoOneDiesPub</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>BCD3C031-EBFD-4060-9F9D-665D91884C64</key>
+		<key>EE7CE06B926AD0E67A102A1DEC339EE6A125A4EC</key>
 		<string>https://github.com/plter/NoOneDies.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>NoOneDiesPub/proj.ios_mac/NoOneDiesPub.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>BCD3C031-EBFD-4060-9F9D-665D91884C64</key>
+		<key>EE7CE06B926AD0E67A102A1DEC339EE6A125A4EC</key>
 		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/plter/NoOneDies.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>BCD3C031-EBFD-4060-9F9D-665D91884C64</string>
+	<string>EE7CE06B926AD0E67A102A1DEC339EE6A125A4EC</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>BCD3C031-EBFD-4060-9F9D-665D91884C64</string>
+			<string>EE7CE06B926AD0E67A102A1DEC339EE6A125A4EC</string>
 			<key>IDESourceControlWCCName</key>
 			<string>NoOneDies</string>
 		</dict>

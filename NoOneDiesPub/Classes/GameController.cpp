@@ -55,7 +55,7 @@ void GameController::onUpdate(){
     
     if (frameIndex>=nextKeyFrameIndex) {
         
-        auto b = Block::create();
+        auto b = game::Block::create();
         _layer->addChild(b);
         b->setPositionY(_positionY+b->getContentSize().height/2);
         
