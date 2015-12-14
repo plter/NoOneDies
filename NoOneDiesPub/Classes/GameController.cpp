@@ -26,7 +26,7 @@ bool GameController::initWithLayerAndPositionY(cocos2d::Layer *layer, float posi
     //add edge
     _edge = Edge::create();
     layer->addChild(_edge);
-    _edge->setPosition(visibleSize.width/2, visibleSize.height/2+positionY);
+    _edge->setPosition(0, positionY);
     
     //add ground
     auto ground = Sprite::create();
@@ -38,7 +38,7 @@ bool GameController::initWithLayerAndPositionY(cocos2d::Layer *layer, float posi
     //add hero
     _hero = Hero::create();
     layer->addChild(_hero);
-    _hero->setPosition(50, positionY+_hero->getContentSize().height/2);
+    _hero->setPosition(50, positionY+_hero->getContentSize().height);
     
     resetTimer();
     return true;

@@ -24,7 +24,7 @@ Animate * FlashTool::readJsonSpriteSheet(std::string jsonFile,float delayPerUnit
     auto sfc = SpriteFrameCache::getInstance();
     
     Vector<AnimationFrame*> animFrames;
-    for (auto m=frames.MemberonBegin(); m!=frames.MemberonEnd(); m++) {
+    for (auto m=frames.MemberBegin(); m!=frames.MemberEnd(); m++) {
         auto frameName = m->name.GetString();
         auto & frameProperties = m->value["frame"];
         auto & spriteSourceSize = m->value["spriteSourceSize"];

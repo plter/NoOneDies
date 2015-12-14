@@ -11,7 +11,7 @@
 
 Scene * Game::createScene(int heroCount){
     auto s = Scene::createWithPhysics();
-//    s->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
+    s->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
     s->getPhysicsWorld()->setGravity(Vec2(0, -1000));
     auto l = Game::create(heroCount);
     s->addChild(l);
