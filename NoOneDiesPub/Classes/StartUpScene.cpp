@@ -67,16 +67,16 @@ void StartUp::addBtnListeners(){
         
         if (this->btnTwo->getBoundingBox().containsPoint(t->getLocation())) {
             Director::getInstance()->getEventDispatcher()->removeEventListener(touchListener);
-            Director::getInstance()->replaceScene(Game::createScene(2));
+            Director::getInstance()->replaceScene(Game::createScene(1));
         }else if (this->btnThree->getBoundingBox().containsPoint(t->getLocation())){
             Director::getInstance()->getEventDispatcher()->removeEventListener(touchListener);
-            Director::getInstance()->replaceScene(Game::createScene(3));
+            Director::getInstance()->replaceScene(Game::createScene(2));
         }else if (this->btnFour->getBoundingBox().containsPoint(t->getLocation())){
             Director::getInstance()->getEventDispatcher()->removeEventListener(touchListener);
-            Director::getInstance()->replaceScene(Game::createScene(4));
+            Director::getInstance()->replaceScene(Game::createScene(3));
         }else if (this->btnFive->getBoundingBox().containsPoint(t->getLocation())){
             Director::getInstance()->getEventDispatcher()->removeEventListener(touchListener);
-            Director::getInstance()->replaceScene(Game::createScene(5));
+            Director::getInstance()->replaceScene(Game::createScene(4));
         }
         
         return false;
@@ -91,28 +91,28 @@ void StartUp::addBtns(){
     btnTwo = Label::create();
     btnTwo->setSystemFontSize(32);
     btnTwo->setColor(Color3B::BLACK);
-    btnTwo->setString("两个");
+    btnTwo->setString("一个");
     btnTwo->setPosition(visibleSize.width/2, visibleSize.height/2+75);
     addChild(btnTwo);
     
     btnThree = Label::create();
     btnThree->setSystemFontSize(32);
     btnThree->setColor(Color3B::BLACK);
-    btnThree->setString("三个");
+    btnThree->setString("两个");
     btnThree->setPosition(visibleSize.width/2, visibleSize.height/2+25);
     addChild(btnThree);
     
     btnFour = Label::create();
     btnFour->setSystemFontSize(32);
     btnFour->setColor(Color3B::BLACK);
-    btnFour->setString("四个");
+    btnFour->setString("三个");
     btnFour->setPosition(visibleSize.width/2, visibleSize.height/2-25);
     addChild(btnFour);
     
     btnFive = Label::create();
     btnFive->setSystemFontSize(32);
     btnFive->setColor(Color3B::BLACK);
-    btnFive->setString("五个");
+    btnFive->setString("四个");
     btnFive->setPosition(visibleSize.width/2, visibleSize.height/2-75);
     addChild(btnFive);
 }
