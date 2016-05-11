@@ -4,3 +4,4 @@ gen
 obj
 Release.win32
 Debug.win32
+.idea
